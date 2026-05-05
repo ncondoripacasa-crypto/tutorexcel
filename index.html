@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecosistema de Aprendizaje de Excel con Inteligencia Artificial</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Loader Inicial -->
+    <div class="loader-wrapper" id="loader">
+        <div class="loader-content">
+            <div class="glow-ring"></div>
+            <div class="glow-ring inner"></div>
+            <i class="fa-solid fa-brain loader-icon"></i>
+            <p>Iniciando Ecosistema IA...</p>
+        </div>
+    </div>
+
+    <!-- Background Particles / Glow -->
+    <div class="bg-particles" id="particles-js"></div>
+    <div class="bg-glows">
+        <div class="glow top-left"></div>
+        <div class="glow center-right"></div>
+        <div class="glow bottom-left"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fa-solid fa-microchip"></i> Excel<span class="highlight">AI</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#problema">Problema</a></li>
+                <li><a href="#arquitectura">Arquitectura</a></li>
+                <li><a href="#tutor">Tutor IA</a></li>
+                <li><a href="#analitica">Analítica</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="icon-btn"><i class="fa-solid fa-moon"></i></button>
+                <div class="hamburger" id="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="container hero-content">
+            <div class="hero-text glass-card fade-in-up">
+                <h1 class="hero-title">Ecosistema de Aprendizaje de <span class="highlight typed-text">Excel con IA</span></h1>
+                <p class="hero-subtitle">Transformando la educación digital mediante tutores inteligentes, analítica de aprendizaje y personalización educativa.</p>
+                <div class="hero-buttons">
+                    <a href="#problema" class="btn btn-primary">Ver Proyecto</a>
+                    <a href="#arquitectura" class="btn btn-secondary">Explorar Arquitectura IA</a>
+                    <a href="#tutor" class="btn btn-glow"><i class="fa-solid fa-robot"></i> Probar Tutor Inteligente</a>
+                </div>
+            </div>
+            <div class="hero-visual fade-in-left">
+                <div class="dashboard-mockup">
+                    <div class="mockup-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <div class="mockup-body">
+                        <div class="mock-line" style="width: 80%"></div>
+                        <div class="mock-line" style="width: 60%"></div>
+                        <div class="mock-line" style="width: 90%"></div>
+                        <div class="mock-chart">
+                            <div class="bar" style="height: 40%"></div>
+                            <div class="bar" style="height: 70%"></div>
+                            <div class="bar" style="height: 50%"></div>
+                            <div class="bar highlight-bar" style="height: 90%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problema Identificado -->
+    <section id="problema" class="section-padding">
+        <div class="container">
+            <div class="section-header text-center fade-in-up">
+                <h2>Brecha Digital en la Educación Superior</h2>
+                <div class="accent-line"></div>
+                <p class="section-desc">Muchos estudiantes universitarios son considerados “nativos digitales”, pero poseen competencias limitadas en herramientas productivas como Excel. Esta brecha tecnológica afecta el rendimiento académico, la toma de decisiones basada en datos y la adaptación a la transformación digital.</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card glass-card hover-glow fade-in-up" data-delay="100">
+                    <div class="stat-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+                    <h3 class="counter" data-target="80">0</h3><span class="percent">%</span>
+                    <p>Usa tecnología solo para consumo digital</p>
+                </div>
+                <div class="stat-card glass-card hover-glow fade-in-up" data-delay="200">
+                    <div class="stat-icon"><i class="fa-solid fa-calculator"></i></div>
+                    <h3 class="counter" data-target="65">0</h3><span class="percent">%</span>
+                    <p>Tiene dificultades con fórmulas básicas</p>
+                </div>
+                <div class="stat-card glass-card hover-glow fade-in-up" data-delay="300">
+                    <div class="stat-icon"><i class="fa-solid fa-chart-pie"></i></div>
+                    <h3 class="counter" data-target="70">0</h3><span class="percent">%</span>
+                    <p>Nunca trabajó con análisis de datos</p>
+                </div>
+                <div class="stat-card glass-card hover-glow fade-in-up" data-delay="400">
+                    <div class="stat-icon"><i class="fa-solid fa-hourglass-half"></i></div>
+                    <h3 class="counter" data-target="3">0</h3><span class="percent"> Meses</span>
+                    <p>Críticos para evitar rezago académico</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transformación Digital -->
+    <section id="transformacion" class="section-padding bg-alt">
+        <div class="container">
+            <div class="split-layout">
+                <div class="split-text fade-in-left">
+                    <h2>La Educación en la Era de la Inteligencia Artificial</h2>
+                    <div class="accent-line left"></div>
+                    <p>El aprendizaje se redefine mediante enfoques innovadores. La integración de la IA permite automatización, aprendizaje personalizado y el desarrollo de competencias digitales necesarias para la transformación digital universitaria.</p>
+                    <ul class="feature-list">
+                        <li><i class="fa-solid fa-check-circle"></i> IA Educativa</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Automatización</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Aprendizaje Personalizado</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Competencias Digitales</li>
+                    </ul>
+                </div>
+                <div class="split-visual grid-2x2 fade-in-right">
+                    <div class="info-card glass-card">
+                        <h4>90%</h4>
+                        <p>De empleos requieren habilidades digitales</p>
+                    </div>
+                    <div class="info-card glass-card highlight-border">
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+                        <p>Crecimiento del uso de IA en educación</p>
+                    </div>
+                    <div class="info-card glass-card full-width">
+                        <h4>Importancia de Excel</h4>
+                        <p>El análisis de datos es el pilar de la toma de decisiones moderna.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Arquitectura de IA -->
+    <section id="arquitectura" class="section-padding">
+        <div class="container">
+            <div class="section-header text-center fade-in-up">
+                <h2>Arquitectura Inteligente del Sistema</h2>
+                <div class="accent-line"></div>
+                <p class="section-desc">El ecosistema integra modelos de lenguaje avanzado (LLM) y recuperación de información (RAG) para ofrecer respuestas pedagógicas personalizadas.</p>
+            </div>
+
+            <!-- Flow Diagram -->
+            <div class="architecture-flow fade-in-up">
+                <div class="flow-node"><i class="fa-solid fa-user-graduate"></i><p>Estudiante</p></div>
+                <div class="flow-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+                <div class="flow-node highlight"><i class="fa-solid fa-comment-dots"></i><p>Prompt</p></div>
+                <div class="flow-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+                <div class="flow-node core"><i class="fa-solid fa-microchip"></i><p>LLM</p></div>
+                <div class="flow-arrow"><i class="fa-solid fa-arrows-left-right"></i></div>
+                <div class="flow-node database"><i class="fa-solid fa-database"></i><p>RAG + BD</p></div>
+                <div class="flow-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+                <div class="flow-node result"><i class="fa-solid fa-lightbulb"></i><p>Retroalimentación</p></div>
+            </div>
+
+            <div class="tech-cards-wrapper grid-3">
+                <div class="tech-card glass-card fade-in-up" data-delay="100">
+                    <div class="card-icon"><i class="fa-solid fa-network-wired"></i></div>
+                    <h3>LLM & RAG</h3>
+                    <p>Uso de arquitectura Transformer y generación aumentada por recuperación para mayor precisión.</p>
+                </div>
+                <div class="tech-card glass-card fade-in-up" data-delay="200">
+                    <div class="card-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3>Learning Analytics</h3>
+                    <p>Análisis en tiempo real del progreso para ajustar la dificultad y la personalización del aprendizaje.</p>
+                </div>
+                <div class="tech-card glass-card fade-in-up" data-delay="300">
+                    <div class="card-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+                    <h3>Tutor Inteligente</h3>
+                    <p>Un sistema empático que no da la respuesta directamente, sino que guía al estudiante al conocimiento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Funcionamiento del Tutor IA -->
+    <section id="tutor" class="section-padding bg-alt">
+        <div class="container">
+            <div class="section-header text-center fade-in-up">
+                <h2>Funcionamiento del Tutor IA</h2>
+                <div class="accent-line"></div>
+                <p class="section-desc">Prueba nuestra simulación visual. El tutor utiliza un diseño estilo ChatGPT optimizado para la pedagogía.</p>
+            </div>
+
+            <div class="chat-demo-container fade-in-up">
+                <div class="chat-interface glass-card">
+                    <div class="chat-header">
+                        <div class="tutor-avatar"><i class="fa-solid fa-robot"></i></div>
+                        <div class="tutor-info">
+                            <h4>Tutor IA Excel</h4>
+                            <span class="status"><span class="dot green"></span> En línea</span>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-body" id="chat-body">
+                        <!-- Messages will be generated by JS -->
+                        <div class="message bot-message">
+                            <div class="msg-avatar"><i class="fa-solid fa-robot"></i></div>
+                            <div class="msg-content">
+                                <p>¡Hola! Soy tu tutor inteligente de Excel. ¿En qué te puedo ayudar hoy?</p>
+                                <div class="suggestion-chips">
+                                    <button class="chip">¿Qué es BUSCARV?</button>
+                                    <button class="chip">¿Cómo usar SUMA?</button>
+                                    <button class="chip">¿Qué significa #VALOR?</button>
+                                    <button class="chip">Explícame referencias absolutas</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-footer">
+                        <div class="input-container">
+                            <input type="text" id="chat-input" placeholder="Escribe tu pregunta aquí...">
+                            <button id="send-btn"><i class="fa-solid fa-paper-plane"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-disclaimer text-center mt-3">
+                    <p><em><i class="fa-solid fa-quote-left"></i> La IA no reemplaza al docente; amplifica su capacidad pedagógica. <i class="fa-solid fa-quote-right"></i></em></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ecosistema de Datos -->
+    <section id="ecosistema" class="section-padding">
+        <div class="container">
+            <div class="section-header text-center fade-in-up">
+                <h2>Ecosistema Inteligente de Datos Educativos</h2>
+                <div class="accent-line"></div>
+            </div>
+
+            <div class="data-ecosystem-visual fade-in-up">
+                <div class="center-node glass-card pulse-glow">
+                    <i class="fa-solid fa-server"></i>
+                    <h4>Tutor IA</h4>
+                </div>
+                <div class="orbiting-nodes">
+                    <div class="orbit-node node-1 glass-card"><i class="fa-solid fa-graduation-cap"></i> LMS</div>
+                    <div class="orbit-node node-2 glass-card"><i class="fa-solid fa-file-excel"></i> Excel</div>
+                    <div class="orbit-node node-3 glass-card"><i class="fa-solid fa-list-check"></i> Forms</div>
+                    <div class="orbit-node node-4 glass-card"><i class="fa-solid fa-chart-simple"></i> Analytics</div>
+                </div>
+            </div>
+
+            <div class="metrics-row mt-4 fade-in-up">
+                <div class="metric-item"><h3 class="counter" data-target="1000">0</h3><p>+ Interacciones LMS</p></div>
+                <div class="metric-item"><h3 class="counter" data-target="500">0</h3><p>+ Prompts Analizados</p></div>
+                <div class="metric-item"><h3 class="counter" data-target="100">0</h3><p>+ Archivos Excel</p></div>
+                <div class="metric-item"><h3 class="counter" data-target="50">0</h3><p>+ Patrones de Error</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Analítica de Aprendizaje -->
+    <section id="analitica" class="section-padding bg-alt">
+        <div class="container">
+            <div class="section-header text-center fade-in-up">
+                <h2>Analítica de Aprendizaje</h2>
+                <div class="accent-line"></div>
+                <p class="section-desc">Dashboard visual moderno para el seguimiento del rendimiento y engagement.</p>
+            </div>
+
+            <div class="dashboard-grid fade-in-up">
+                <div class="dash-card glass-card col-span-2">
+                    <div class="card-header"><h4>Progreso Estudiantil (Pretest vs Postest)</h4></div>
+                    <div class="chart-container mock-bar-chart">
+                        <div class="chart-col"><div class="bar pre" style="height: 40%"></div><div class="bar post" style="height: 85%"></div><span>Módulo 1</span></div>
+                        <div class="chart-col"><div class="bar pre" style="height: 30%"></div><div class="bar post" style="height: 75%"></div><span>Módulo 2</span></div>
+                        <div class="chart-col"><div class="bar pre" style="height: 50%"></div><div class="bar post" style="height: 90%"></div><span>Módulo 3</span></div>
+                        <div class="chart-col"><div class="bar pre" style="height: 20%"></div><div class="bar post" style="height: 80%"></div><span>Módulo 4</span></div>
+                    </div>
+                </div>
+                <div class="dash-card glass-card">
+                    <div class="card-header"><h4>Errores Frecuentes</h4></div>
+                    <ul class="error-list">
+                        <li><span>#VALOR!</span> <div class="progress-bar"><div class="fill" style="width: 80%"></div></div></li>
+                        <li><span>#¡REF!</span> <div class="progress-bar"><div class="fill" style="width: 60%"></div></div></li>
+                        <li><span>Sintaxis</span> <div class="progress-bar"><div class="fill" style="width: 45%"></div></div></li>
+                        <li><span>Rangos</span> <div class="progress-bar"><div class="fill" style="width: 30%"></div></div></li>
+                    </ul>
+                </div>
+                <div class="dash-card glass-card highlight-card col-span-3 text-center">
+                    <h3 class="glow-text">Reducción esperada de la brecha tecnológica: 30%</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Objetivos SMART (Timeline) -->
+    <section id="objetivos" class="section-padding">
+        <div class="container">
+            <div class="section-header text-center fade-in-up">
+                <h2>Objetivos SMART</h2>
+                <div class="accent-line"></div>
+            </div>
+
+            <div class="timeline fade-in-up">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card hover-glow">
+                        <h3>Mes 1: Diagnóstico</h3>
+                        <p>Evaluación inicial (pretest), configuración de la plataforma de IA e integración con el LMS.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card hover-glow">
+                        <h3>Mes 2: Intervención</h3>
+                        <p>Despliegue de tutorías inteligentes, seguimiento continuo y recopilación de analítica educativa.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card hover-glow">
+                        <h3>Mes 3: Evaluación</h3>
+                        <p>Realización del postest, evaluación de impacto, análisis de métricas e informe final de resultados.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dimensión Ética -->
+    <section id="etica" class="section-padding bg-alt">
+        <div class="container">
+            <div class="section-header text-center fade-in-up">
+                <h2>Dimensión Ética</h2>
+                <div class="accent-line"></div>
+                <p class="section-desc">Garantizando un entorno seguro, transparente e inclusivo para todos los estudiantes.</p>
+            </div>
+
+            <div class="ethics-grid grid-3 fade-in-up">
+                <div class="ethic-card glass-card hover-float">
+                    <div class="ethic-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h4>Privacidad de Datos</h4>
+                    <p>Anonimización estricta de la información del estudiante y cumplimiento normativo institucional.</p>
+                </div>
+                <div class="ethic-card glass-card hover-float">
+                    <div class="ethic-icon"><i class="fa-solid fa-eye"></i></div>
+                    <h4>Transparencia e IA Explicable</h4>
+                    <p>El algoritmo justifica sus decisiones para asegurar la confianza del usuario.</p>
+                </div>
+                <div class="ethic-card glass-card hover-float">
+                    <div class="ethic-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                    <h4>Mitigación de Sesgos</h4>
+                    <p>Modelos ajustados y auditados mediante supervisión humana continua.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impacto y Antes/Después -->
+    <section id="impacto" class="section-padding">
+        <div class="container">
+            <div class="split-layout">
+                <!-- Impacto -->
+                <div class="impact-section fade-in-left">
+                    <h2>Impacto del Proyecto</h2>
+                    <div class="accent-line left"></div>
+                    <ul class="impact-list">
+                        <li>
+                            <i class="fa-solid fa-user-graduate"></i>
+                            <div>
+                                <h4>Para Estudiantes</h4>
+                                <p>Mejora de competencias digitales y autonomía de aprendizaje.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-chalkboard-user"></i>
+                            <div>
+                                <h4>Para Docentes</h4>
+                                <p>Automatización del feedback y herramientas avanzadas de seguimiento.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-building-columns"></i>
+                            <div>
+                                <h4>Para la Universidad</h4>
+                                <p>Innovación institucional, reducción de deserción y aumento de retención.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Antes vs Después -->
+                <div class="comparison-section fade-in-right">
+                    <div class="comparison-table glass-card">
+                        <div class="comp-col antes">
+                            <div class="comp-header">ANTES</div>
+                            <ul>
+                                <li><i class="fa-solid fa-xmark"></i> Aprendizaje tradicional</li>
+                                <li><i class="fa-solid fa-xmark"></i> Retroalimentación lenta</li>
+                                <li><i class="fa-solid fa-xmark"></i> Poca personalización</li>
+                                <li><i class="fa-solid fa-xmark"></i> Frustración técnica</li>
+                            </ul>
+                        </div>
+                        <div class="comp-col despues">
+                            <div class="comp-header highlight-bg">DESPUÉS</div>
+                            <ul>
+                                <li><i class="fa-solid fa-check"></i> Tutor IA 24/7</li>
+                                <li><i class="fa-solid fa-check"></i> Aprendizaje personalizado</li>
+                                <li><i class="fa-solid fa-check"></i> Feedback inmediato</li>
+                                <li><i class="fa-solid fa-check"></i> Autonomía digital</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tecnologías Utilizadas -->
+    <section id="tecnologias" class="section-padding bg-alt">
+        <div class="container">
+            <div class="section-header text-center fade-in-up">
+                <h2>Tecnologías Utilizadas</h2>
+                <div class="accent-line"></div>
+            </div>
+            
+            <div class="tech-logos fade-in-up">
+                <div class="tech-logo glass-card hover-glow"><i class="fa-brands fa-github"></i><span>GitHub</span></div>
+                <div class="tech-logo glass-card hover-glow"><i class="fa-solid fa-cloud"></i><span>Netlify</span></div>
+                <div class="tech-logo glass-card hover-glow"><i class="fa-solid fa-robot"></i><span>Google AI Studio</span></div>
+                <div class="tech-logo glass-card hover-glow"><i class="fa-brands fa-microsoft"></i><span>Teams / Excel</span></div>
+                <div class="tech-logo glass-card hover-glow"><i class="fa-solid fa-brain"></i><span>IA Generativa</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conclusiones -->
+    <section class="conclusion-section section-padding text-center">
+        <div class="container">
+            <div class="conclusion-box glass-card fade-in-up p-5">
+                <i class="fa-solid fa-lightbulb highlight-text text-4xl mb-3"></i>
+                <h3 class="mb-3">Visión del Proyecto</h3>
+                <p class="text-lg">"El ecosistema inteligente de aprendizaje representa una nueva visión de la educación digital universitaria, donde la IA potencia la personalización, reduce brechas tecnológicas y fortalece la transformación educativa."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3><i class="fa-solid fa-microchip"></i> Excel<span class="highlight">AI</span></h3>
+                    <p>Proyecto de Maestría en Docencia, Tecnología y Sociedad Global.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="#hero">Inicio</a></li>
+                        <li><a href="#arquitectura">Arquitectura</a></li>
+                        <li><a href="#tutor">Tutor Demo</a></li>
+                        <li><a href="https://github.com/" target="_blank">Repositorio GitHub</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Contacto</h4>
+                    <div class="social-icons">
+                        <a href="#" class="icon-btn"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" class="icon-btn"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="icon-btn"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ecosistema de Aprendizaje de Excel con IA. Todos los derechos reservados.</p>
+                <p class="small-text">Proyecto académico de investigación e innovación tecnológica.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
